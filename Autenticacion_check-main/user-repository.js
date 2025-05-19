@@ -4,6 +4,7 @@ import crypto from 'node:crypto'
 import { SALT_ROUNDS } from '../config.js'
 const {Schema} = new DBLocal({path:'./db'})
 
+// Esquema de usuario
 const User = Schema('User', {
   _id: { type: String, required: true },
   username: { type: String, required: true },
@@ -15,12 +16,15 @@ export class UserRepository {
     Validation.username(username)
     Validation.password(password)
 
+    // Esperamos la búsqueda para comprobar si existe el usuario
     const user = await User.findOne({ username })
     if (user) throw new Error('username already exists')
 
     const id = crypto.randomUUID()
+    // Hasheamos la contraseña con await
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS)
 
+    // Creamos el usuario y esperamos a que se guarde
     await User.create({
       _id: id,
       username,

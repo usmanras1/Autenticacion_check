@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuari</title>
+    <link rel="stylesheet" href="/styleForm.css">
+</head>
+<body>
+    <header>
+        <h1>Editar Usuari</h1>
+    </header>
+    <main>
+        
+        <form action="/usuaris/<%= usuari.user_id %>?_method=PUT" method="POST">
+            <h2>Edita l'usuari</h2>
+            <label for="name">Nom de l'usuari:</label>
+            <input type="text" id="name" name="name" value="<%= usuari.name %>" required>
+            <br>
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email" value="<%= usuari.email %>" required>
+            <br>
+            <label for="role">Rol:</label>
+            <select id="role" name="role" required>
+                <option value="admin" <%= usuari.role === 'admin' ? 'selected' : '' %>>Admin</option>
+                <option value="user" <%= usuari.role === 'user' ? 'selected' : '' %>>User</option>
+            </select>
+            <br>
+            <button type="submit">Guardar canvis</button>
+        </form>
+        <a href="/usuaris" class="back-button">Tornar a Usuaris</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestió de Recursos per <%= user.name %>!</h1>
+        <span><a href="/reserves"> Llista Recursos</a></span>
+    </header>
+    <main>
+        <section>
+            <h2>Detall Reserva</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <span>Tipus: <%= reserva.tipus %></span>
+                    <span>Hora inici: <%= reserva.hora_inici %> </span>
+                    <span>Hora final: <%= reserva.hora_final %> </span>
+                    <span>Estat: <%= reserva.estat %> </span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

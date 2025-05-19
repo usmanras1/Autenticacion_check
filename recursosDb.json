@@ -1,0 +1,14 @@
+{
+    "recursos": [
+        {
+            "recursos_id": 1,
+            "tipus": "motos",
+            "estat": "disponible"
+        },
+        {
+            "recursos_id": 2,
+            "tipus": "Ferrai",
+            "estat": "disponible"
+        }
+    ]
+}

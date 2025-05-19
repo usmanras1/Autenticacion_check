@@ -1,0 +1,16 @@
+{
+    "usuari": [
+        {
+            "usuari_id": 1,
+            "email": "usman.rashid.7e7@itb.cat",
+            "contrasenya": 12345678,
+            "rol": "cliente"
+        },
+        {
+            "usuari_id": 2,
+            "email": "usman.rashid.7e7@itb.cat",
+            "contrasenya": 1234567,
+            "rol": "cliente"
+        }
+    ]
+}

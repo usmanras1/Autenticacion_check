@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Notificacions</title>
+    <link rel="stylesheet" href="/styleForm.css">
+</head>
+<body>
+    <header>
+        <h1>Editar Notificació</h1>
+    </header>
+    <main>
+        <form action="/notificacions/<%= notificacio.notificacions_id %>?_method=PUT" method="POST">
+            <h2>Edita la notificació</h2>
+            <label for="titol">Títol:</label>
+            <input type="text" id="titol" name="titol" value="<%= notificacio.titol %>" required>
+            <br>
+            <label for="missatge">Missatge:</label>
+            <textarea id="missatge" name="missatge" required><%= notificacio.missatge %></textarea>
+            <br>
+            <label for="data_modificacion">Data de la modificació:</label>
+            <input type="datetime-local" id="data_modificacion" name="data_modificacion" value="<%= notificacio.data_modificacion %>" required>
+            <br>
+            <button type="submit">Guardar canvis</button>
+        </form>
+        <a href="/notificacions" class="back-button">Tornar a Notificacions</a>
+    </main>
+</body>
+</html>

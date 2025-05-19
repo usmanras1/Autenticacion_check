@@ -1,0 +1,14 @@
+{
+    "notificacions": [
+        {
+            "notificacions_id": 1,
+            "data_modificacion": "10/06/2005",
+            "missatge": "Bienvenido Amigo"
+        },
+        {
+            "notificacions_id": 2,
+            "data_modificacion": "15/06/2005",
+            "missatge": "Adios Amigo"
+        }
+    ]
+}

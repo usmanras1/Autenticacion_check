@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestió d'usuaris per <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Gestió d'usuaris</h2>
+            <ul class="product-list">
+                <% data.usuari.forEach(users=> { %>
+                    <li class="product-item">
+                        <span>Email: <%= users.email %></span>
+                        <span>Rol: <%= users.rol %> </span>
+                        <span><a href="/usuaris/<%=users.usuari_id%>"> Detall Usuaris</a></span>
+                        <span><a href="/usuaris/editarUsuaris/<%=users.usuari_id%>"> Editar Usuaris</a></span>
+                    </li>
+                    <% }); %>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

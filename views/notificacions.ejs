@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestió d'usuaris per <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Sistema de notificacions</h2>
+            <ul class="product-list">
+                <% data.notificacions.forEach(not=> { %>
+                    <li class="product-item">
+                        <span>Missatge: <%= not.missatge %> </span>
+                        <span>Data de la modificació: <%= not.data_modificacion %></span>
+                        <span><a href="/notificacions/<%=not.notificacions_id%>"> Detall Notificació</a></span>
+                        <span><a href="/notificacions/editarNotificacions/<%=not.notificacions_id%>">Editar Notificació</a></span>
+                    </li>
+                    <% }); %>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+    "reserves": [
+      {
+        "reserves_id": 1,
+        "data": "19/05/2025",
+        "hora_inici": "09:00",
+        "hora_final": "12:00",
+        "estat": "Actiu"
+      },
+      {
+        "reserves_id": 2,
+        "data": "20/05/2025",
+        "hora_inici": "14:00",
+        "hora_final": "16:30",
+        "estat": "Actiu"
+      },
+      {
+        "reserves_id": 3,
+        "data": "21/05/2025",
+        "hora_inici": "08:30",
+        "hora_final": "11:45",
+        "estat": "Actiu"
+      }
+    ]
+  }
+  

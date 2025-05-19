@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestió de Recursos per <%= user.name %>!</h1>
+        <a href="/recursos"> Llista Reserves</a>
+    </header>
+    <main>
+        <section>
+            <h2>Llista de Recursos</h2>
+            <ul class="product-list">
+                
+                    <li class="product-item">
+                        <span>Tipus recursos: <%= recursos.tipus %></span>
+                        <span>Estat: <%= recursos.estat %> </span>
+                    </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

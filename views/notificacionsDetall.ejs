@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de notificacions per <%= user.name %>!</h1>
+        <span><a href="/notificacions"> Sistema de notificacions</a></span>
+    </header>
+    <main>
+        <section>
+            <h2>Detall notificació</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <span>Missatge: <%= notificacio.missatge %></span>
+                    <span>Data de la modificació: <%= notificacio.data_modificacion %></span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

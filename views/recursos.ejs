@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestió de Recursos per <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Llista de Recursos</h2>
+            <ul class="product-list">
+                <% data.recursos.forEach(recurso=> { %>
+                    <li class="product-item">
+                        <span>Tipus recursos: <%= recurso.tipus %></span>
+                        <span>Estat: <%= recurso.estat %> </span>
+                        <span><a href="/recursos/<%=recurso.recursos_id%>"> Detall Recurso</a></span>
+                        <span><a href="/recursos/editarRecursos/<%=recurso.recursos_id%>"> Editar Recurso</a></span></li>
+                    <% }); %>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

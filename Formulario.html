@@ -22,7 +22,7 @@
             let emailInput = document.getElementById("email");
             let errorSpan = document.getElementById("errorEmail");
             if (!emailInput.checkValidity()) {
-                event.preventDefault(); // Evita el envío
+                event.preventDefault(); 
                 errorSpan.innerText = "Por favor, introduce un correo válido.";
             } else {
                 errorSpan.innerText = "";

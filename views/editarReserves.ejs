@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Reserves</title>
+    <link rel="stylesheet" href="/styleForm.css">
+</head>
+<body>
+    <header>
+        <h1>Editar Reserves</h1>
+    </header>
+    <main>
+        <form action="/reserves/<%= reserva.reserve_id %>?_method=PUT" method="POST">
+            <h2>Edita la reserva</h2>
+            <label for="resourceName">Nom del recurs:</label>
+            <input type="text" id="resourceName" name="resourceName" value="<%= reserva.resourceName %>" required>
+            <br>
+            <label for="startDate">Data d'inici:</label>
+            <input type="datetime-local" id="startDate" name="startDate" value="<%= reserva.startDate %>" required>
+            <br>
+            <label for="endDate">Data de fi:</label>
+            <input type="datetime-local" id="endDate" name="endDate" value="<%= reserva.endDate %>" required>
+            <br>
+            <label for="description">Descripció:</label>
+            <textarea id="description" name="description" required><%= reserva.description %></textarea>
+            <br>
+            <button type="submit">Guardar canvis</button>
+        </form>
+        <a href="/reserves" class="back-button">Tornar a Reserves</a>
+    </main>
+</body>
+</html>

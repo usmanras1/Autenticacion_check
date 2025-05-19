@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestió de Recursos per <%= user.name %>!</h1>
+        <span><a href="/usuaris"> Gestió d'usuaris</a></span>
+    </header>
+    <main>
+        <section>
+            <h2>Detall usuari</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <span>Tipus: <%= usuari.email %></span>
+                    <span>Hora inici: <%= usuari.rol %> </span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
